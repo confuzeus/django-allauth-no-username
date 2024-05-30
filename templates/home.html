@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allauth without Username</title>
+  </head>
+  <body>
+    <h1>Allauth without Username</h1>
+    {% if user.is_authenticated %}
+    <p><a href="{% url "account_logout" %}">Logout</a></p>
+    {% else %}
+    <p><a href="{% url "account_login" %}">Login</a></p>
+    <p><a href="{% url "account_signup" %}">Signup</a></p>
+    {% endif %}
+  </body>
+</html>
